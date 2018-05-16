@@ -1,11 +1,13 @@
 # DIP
-数字图像处理大作业，做一个简单的PS吧
+数字图像处理大作业，根据数字图像处理课上讲的一些内容,进行一个简单的实现吧
+基本上是调用scimage的API了
 
 ## 技术栈
 
-1. pillow
-2. scikit-image
-3. electron
+1. pillow 似乎scimage包含pillow里边的功能啊, 放弃pillow了
+2. **scikit-image** scimage(针对我需要实现的简单功能来说, 是一个很全面的数字图像处理包
+3. openCV 看心情
+4. electron 用作GUI
 
 ## 需求抽离
 

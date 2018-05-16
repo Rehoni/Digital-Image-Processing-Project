@@ -23,6 +23,8 @@ io.imshow(prewitt)
 plt.show()
 
 # 几种滤波，用于图像复原
+# 还存在一些问题
+# 维纳滤波和逆滤波的变换还没搞好
 
 # inverse = filters.inverse(img)
 # wiener = filters.wiener(img)

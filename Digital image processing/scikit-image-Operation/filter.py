@@ -1,29 +1,29 @@
-from skimage import io,color, data,filters
+# todo: filters模块：边缘检测算子和几种常见滤波（filter）
+
+from skimage import io, color, data, filters
 from skimage.morphology import disk
 import matplotlib.pyplot as plt
 
-image=io.imread('../lena.jpg')
-img=color.rgb2gray(image)
+image = io.imread('../lena.jpg')
+img = color.rgb2gray(image)
 
 # 几种边缘检测算子
 img = data.camera()
 sobel = filters.sobel(img)
 laplace = filters.laplace(img)
-prewitt=filters.prewitt(img)
+prewitt = filters.prewitt(img)
 roberts = filters.roberts(img)
-plt.figure('suanzi',figsize=(8,8))
+plt.figure('suanzi', figsize=(8, 8))
 plt.subplot(221)
-plt.imshow(img,plt.gray())
+plt.imshow(img, plt.gray())
 plt.subplot(222)
 io.imshow(sobel)
 plt.subplot(223)
-io.imshow(roberts) #gaussian有点小问题
+io.imshow(roberts)  # gaussian有点小问题
 plt.subplot(224)
 io.imshow(prewitt)
 plt.show()
 
-# 几种滤波，用于图像复原
-# 还存在一些问题
 # 维纳滤波和逆滤波的变换还没搞好
 
 # inverse = filters.inverse(img)
@@ -31,7 +31,7 @@ plt.show()
 gaussian1 = filters.gaussian(img, sigma=0.1)
 gaussian = filters.gaussian(img, sigma=1.0)
 
-median = filters.median(img,disk(5))
+median = filters.median(img, disk(5))
 median1 = filters.median(img, disk(9))
 
 plt.figure()

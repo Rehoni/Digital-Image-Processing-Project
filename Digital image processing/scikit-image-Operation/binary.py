@@ -1,4 +1,4 @@
-# todo: 了解各个api具体含义
+# todo: filters模块：图像自动阈值分割：了解各个api具体含义
 
 from skimage import data, filters
 import matplotlib.pyplot as plt

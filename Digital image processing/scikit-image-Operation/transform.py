@@ -1,3 +1,4 @@
+# todo: transform模块：提供缩放和旋转
 from skimage import io, transform, data
 import numpy as np
 import matplotlib.pyplot as plt

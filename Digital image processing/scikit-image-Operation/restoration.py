@@ -1,4 +1,4 @@
-# todo : 仅仅实现了wiener滤波复原
+# todo : restoration模块：仅仅实现了wiener滤波复原
 # 提供图像恢复功能
 
 import numpy as np

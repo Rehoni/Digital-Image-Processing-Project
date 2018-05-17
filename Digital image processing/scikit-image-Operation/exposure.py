@@ -1,2 +1,2 @@
-# 提供直方图均衡和图像的调整
+# todo: exposure模块：对比度亮度调整（exposure）
 

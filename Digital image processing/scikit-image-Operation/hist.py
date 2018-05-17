@@ -1,4 +1,5 @@
-# todo: 直方图显示和均衡化
+# todo: exposure模块：直方图和均衡化（hist）
+
 
 import numpy as np
 from skimage import exposure, data

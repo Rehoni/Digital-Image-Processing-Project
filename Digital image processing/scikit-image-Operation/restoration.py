@@ -1,3 +1,4 @@
+# todo : 仅仅实现了wiener滤波复原
 # 提供图像恢复功能
 
 import numpy as np
@@ -23,6 +24,7 @@ def wiener_restoration(noisePicture):
     img += 0.1 * img.std() * np.random.standard_normal(img.shape)
     deconvolved_img = restoration.wiener(image=img, psf=psf, balance=1100)
     return deconvolved_img
+
 
 
 def show_pictures():

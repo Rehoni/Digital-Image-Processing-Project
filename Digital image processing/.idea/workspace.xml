@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10892c0a-d050-4c8d-8d4d-a4ab88c4b02c" name="Default" comment="修改了一下文件夹名称和项目名称">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-image-Operation/binary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scikit-image-Operation/hist.py" afterDir="false" />
+    <list default="true" id="10892c0a-d050-4c8d-8d4d-a4ab88c4b02c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scikit-image-Operation/restoration.py" beforeDir="false" afterPath="$PROJECT_DIR$/scikit-image-Operation/restoration.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,65 +45,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="filter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="filter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scikit-image-Operation/filter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="88">
+              <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transform.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scikit-image-Operation/transform.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="binary.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scikit-image-Operation/binary.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="restoration.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scikit-image-Operation/restoration.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hist.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scikit-image-Operation/hist.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-              <folding>
-                <element signature="e#19#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cm.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/matplotlib/cm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="42" column="46" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -143,12 +88,12 @@
         <option value="$PROJECT_DIR$/imageenhance/enhancepic.py" />
         <option value="$PROJECT_DIR$/filter/filterpic.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/scikit-image-Operation/transform.py" />
-        <option value="$PROJECT_DIR$/scikit-image-Operation/filter.py" />
-        <option value="$PROJECT_DIR$/scikit-image-Operation/exposure.py" />
         <option value="$PROJECT_DIR$/venv/Lib/site-packages/dateutil/parser/_parser.py" />
-        <option value="$PROJECT_DIR$/scikit-image-Operation/restoration.py" />
         <option value="$PROJECT_DIR$/scikit-image-Operation/binary.py" />
+        <option value="$PROJECT_DIR$/scikit-image-Operation/exposure.py" />
+        <option value="$PROJECT_DIR$/scikit-image-Operation/filter.py" />
+        <option value="$PROJECT_DIR$/scikit-image-Operation/restoration.py" />
+        <option value="$PROJECT_DIR$/scikit-image-Operation/transform.py" />
         <option value="$PROJECT_DIR$/scikit-image-Operation/hist.py" />
       </list>
     </option>
@@ -162,7 +107,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="365" />
     <option name="y" value="41" />
     <option name="width" value="1346" />
@@ -384,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1526539060847</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="直方图均衡化和自动阈值分割">
+      <created>1526551843141</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526551843141</updated>
+    </task>
+    <task id="LOCAL-00005" summary="整理了一下todolist">
+      <created>1526553453748</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1526553453748</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -397,20 +356,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="365" y="41" width="1346" height="802" extended-state="0" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49785867" weight="0.32951945" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" sideWeight="0.49785867" visible="true" weight="0.46568626" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.501606" side_tool="true" weight="0.35583523" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.61509633" visible="true" weight="0.3926097" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.61509633" weight="0.3926097" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.498394" weight="0.3290993" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498394" weight="0.35583523" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49892932" weight="0.32951945" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.21413276" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.31298906" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32976446" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49829352" visible="true" weight="0.3035332" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946466" weight="0.32951945" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49829352" weight="0.3035332" />
       <window_info id="Structure" order="1" sideWeight="0.5018868" side_tool="true" weight="0.19700214" />
       <window_info id="Favorites" order="2" sideWeight="0.5018868" side_tool="true" weight="0.19700214" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995381" />
@@ -421,7 +380,6 @@
       <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" sideWeight="0.5017065" side_tool="true" weight="0.20021413" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946466" weight="0.32951945" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +417,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tranform 基本了解" />
     <MESSAGE value="修改了一下文件夹名称和项目名称" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了一下文件夹名称和项目名称" />
+    <MESSAGE value="直方图均衡化和自动阈值分割" />
+    <MESSAGE value="整理了一下todolist" />
+    <option name="LAST_COMMIT_MESSAGE" value="整理了一下todolist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -754,16 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-image-Operation/filter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/skimage/transform/_warps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -778,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-image-Operation/restoration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_run_in_console.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -794,15 +737,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/matplotlib/cm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
+        <state relative-caret-position="22">
           <caret line="42" column="46" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-image-Operation/binary.py">
+    <entry file="file://$PROJECT_DIR$/scikit-image-Operation/hist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+          <folding>
+            <element signature="e#19#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -813,22 +759,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-image-Operation/restoration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scikit-image-Operation/binary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scikit-image-Operation/transform.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scikit-image-Operation/hist.py">
+    <entry file="file://$PROJECT_DIR$/scikit-image-Operation/filter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="88">
+          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
           <folding>
-            <element signature="e#19#37#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>

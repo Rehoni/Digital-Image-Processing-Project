@@ -11,7 +11,7 @@
 
 ## 放个about图
 
-![about图](F:\Github\DIP\UI assert\about.png)
+![about图](UIassets\about.png)
 
 ## 需求抽离
 

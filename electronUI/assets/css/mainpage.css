@@ -1,0 +1,41 @@
+  .main {
+    --about-space: 4rem;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    opacity: 1;
+  }
+
+  .import{
+    display: table;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    padding: 0 var(--about-space) 0 var(--about-space);
+    background-color: #2b2f3b;
+  }
+  .import-container{
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .show-container{
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #ffffff;
+  }
+
+  
+
+
+  
+
+  
+
+  
+  

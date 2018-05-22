@@ -1,5 +1,3 @@
-/* Welcome ------------------------ */
-
 .about {
     --about-space: 4rem;
     position: absolute;
@@ -93,7 +91,8 @@
     margin: var(--about-space) 0 0 0;
     text-align: center;
   }
-
+  
+  /* button css */
   .about-button {
     display: block;
     margin: 0 auto;
@@ -110,7 +109,7 @@
     border-color: hsl(0,0%,88%);
   }
   
-  
+
   .rainbow-button-wrapper {
     --rainbow-button-width: 170px;
     --rainbow-button-height: 50px;

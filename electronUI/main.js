@@ -1,5 +1,3 @@
-
-
 const electron = require('electron')
 //electron.app负责管理Electron 应用程序的生命周期， electron.BrowserWindow类负责创建窗口。 
 
@@ -249,7 +247,7 @@ app.on('ready', createWindow)
 
 ipcMain.on('open-mainwindow',function(){
     win.loadURL(url.format({
-        pathname: path.join(__dirname, 'ha.html'),
+        pathname: path.join(__dirname, 'main.html'),
         protocol: 'file:',
         slashes: true
     }))

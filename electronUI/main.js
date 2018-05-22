@@ -1,3 +1,5 @@
+
+
 const electron = require('electron')
 //electron.app负责管理Electron 应用程序的生命周期， electron.BrowserWindow类负责创建窗口。 
 
@@ -7,6 +9,11 @@ const app = electron.app
 
 const path = require('path')
 const url = require('url')
+const os = require('os')
+const {ipcMain} = require('electron')
+const dialog = require('electron').dialog
+
+
 
 let template = [{
     label: '编辑',
@@ -230,18 +237,34 @@ if (process.platform === 'darwin') {
 
 
 function createWindow() {
-    win = new BrowserWindow({ width: 1200, height: 700 })
+    win = new BrowserWindow({ width: 1300, height: 800 })
     win.loadURL(url.format({
-        pathname: path.join(__dirname, 'index.html'),
+        pathname: path.join(__dirname, 'about.html'),
+        protocol: 'file:',
+        slashes: true
+    }))
+}
+
+app.on('ready', createWindow)
+
+ipcMain.on('open-mainwindow',function(){
+    win.loadURL(url.format({
+        pathname: path.join(__dirname, 'ha.html'),
         protocol: 'file:',
         slashes: true
     }))
 
     const menu = Menu.buildFromTemplate(template)
     Menu.setApplicationMenu(menu)
-}
+})
 
-app.on('ready', createWindow)
+ipcMain.on('open-file-dialog', function (event) {
+  dialog.showOpenDialog({
+    properties: ['openFile', 'openDirectory']
+  }, function (files) {
+    if (files) event.sender.send('selected-directory', files)
+  })
+})
 
 app.on('browser-window-created', function () {
     let reopenMenuItem = findReopenMenuItem()

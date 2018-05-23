@@ -377,7 +377,7 @@ function openFile(event){
         properties: ['openFile'],
         filters:[{name: 'Images', extensions: ['jpg', 'png', 'gif']}] //指定为图片
       }, function (files) {
-        if (files) event.sender.send('selected-directory', files)
+        if (files) event.sender.send('selected-image', files)
       })
 }
 

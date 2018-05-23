@@ -1,5 +1,5 @@
   .main {
-    --about-space: 4rem;
+    --main-space: 4rem;
     position: absolute;
     z-index: 1;
     display: flex;
@@ -16,15 +16,24 @@
     margin: 0;
     width: 60%;
     height: 100%;
-    padding: 0 var(--about-space) 0 var(--about-space);
+    padding: 0 var(--main-space) 0 var(--main-space);
     background-color: #21252b;
   }
   .import-container{
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+    width: fit-content;
+    height: fit-content;
   }
 
+  img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+  }
 
   .show{
     display: table;
@@ -36,13 +45,13 @@
 
   .show-container{
     display: table-cell;
-    padding: 0 var(--about-space) 0 var(--about-space);
+    padding: 0 var(--main-space) 0 var(--main-space);
     /* vertical-align: middle; */
   }
 
   .show-container h2, h3{
     color: whitesmoke;
-    margin: var(--about-space) 0 var(--about-space) 0;
+    margin: var(--main-space) 0 var(--main-space) 0;
   }
 
 

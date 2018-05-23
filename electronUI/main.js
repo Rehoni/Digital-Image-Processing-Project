@@ -43,6 +43,135 @@ let template = [{
         role: 'selectall'
     }]
 }, {
+    label: '文件',
+    submenu: [{
+        label: '打开图片',
+        accelerator: '',
+        click: function(event){
+            openFile(event)
+        }
+    },{
+        label: '转化为灰度图',
+        accelerator: '',
+        click: function(event){
+
+        }
+    },{
+        label: '保存图片',
+        accelerator: '',
+        click: function(event){
+            saveFile(event)
+        }
+    }]
+}, {
+    label: '增强',
+    submenu: [{
+        label: '直方图修正',
+        accelerator: '',
+        click: function(event){
+            
+        }
+    },{
+        label: '灰度图增强',
+        accelerator: '',
+        click: function(event){
+
+        }
+    },{
+        label: '彩色图增强',
+        accelerator: '',
+        click: function(event){
+            
+        }
+    },{
+        label: '低通滤波',
+        accelerator: '',
+        click: function(event){
+            
+        }
+    },{
+        label: '高通滤波',
+        accelerator: '',
+        click: function(event){
+            
+        }
+    },{
+        label: '同态滤波',
+        accelerator: '',
+        click: function(event){
+            
+        }
+    }]
+}, {
+    label: '变换',
+    submenu: [{
+        label: '旋转平移',
+        accelerator: '',
+        click: function(event){
+
+        }
+    },{
+        label: '拉伸（调整尺寸）',
+        accelerator: '',
+        click: function(event){
+
+        }
+    },{
+        label: '放大缩小',
+        accelerator: '',
+        click: function(event){
+            
+        }
+    }]
+}, {
+    label: '边缘检测',
+    submenu: [{
+        label: 'Sobel',
+        accelerator: '',
+        click: function(event){
+
+        }
+    },{
+        label: 'Laplace',
+        accelerator: '',
+        click: function(event){
+
+        }
+    },{
+        label: 'Prewitt',
+        accelerator: '',
+        click: function(event){
+            
+        }
+    },{
+        label: 'Roberts',
+        accelerator: '',
+        click: function(event){
+            
+        }
+    }]
+}, {
+    label: '高级',
+    submenu: [{
+        label: '图像复原',
+        accelerator: '',
+        click: function(event){
+
+        }
+    },{
+        label: '图像分割',
+        accelerator: '',
+        click: function(event){
+
+        }
+    },{
+        label: '图像压缩',
+        accelerator: '',
+        click: function(event){
+            
+        }
+    }]
+}, {
     label: '查看',
     submenu: [{
         label: '重载',
@@ -243,6 +372,27 @@ function createWindow() {
     }))
 }
 
+function openFile(event){
+    dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters:[{name: 'Images', extensions: ['jpg', 'png', 'gif']}] //指定为图片
+      }, function (files) {
+        if (files) event.sender.send('selected-directory', files)
+      })
+}
+
+function saveFile(event){
+    const options = {
+        title: '保存图片',
+        filters: [
+            {names: 'Images',extensions: ['jpg', 'png', 'gif']}
+        ]
+    }
+    dialog.showSaveDialog(options, function(filename){
+        event.sender.send('save-file', filename)
+    })
+}
+
 app.on('ready', createWindow)
 
 ipcMain.on('open-mainwindow',function(){
@@ -257,11 +407,11 @@ ipcMain.on('open-mainwindow',function(){
 })
 
 ipcMain.on('open-file-dialog', function (event) {
-  dialog.showOpenDialog({
-    properties: ['openFile', 'openDirectory']
-  }, function (files) {
-    if (files) event.sender.send('selected-directory', files)
-  })
+    openFile(event)
+})
+
+ipcMain.on('save-file-dialog', function (event) {
+    saveFile(event)
 })
 
 app.on('browser-window-created', function () {

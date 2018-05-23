@@ -5,13 +5,22 @@ const BrowserWindow = electron.BrowserWindow
 const Menu = electron.Menu
 const app = electron.app
 
+
 const path = require('path')
 const url = require('url')
 const os = require('os')
-const {ipcMain} = require('electron')
-const dialog = require('electron').dialog
+const { ipcMain } = require('electron')
+const { ipcRender } = require('electron')
+const { dialog } = require('electron')
 
+const zerorpc = require('zerorpc');
 
+var client = new zerorpc.Client();
+client.connect("tcp://127.0.0.1:4242");
+
+client.invoke('hello','rpc',function(error,res,more){
+    console.log(res);
+})
 
 let template = [{
     label: '编辑',
@@ -47,19 +56,24 @@ let template = [{
     submenu: [{
         label: '打开图片',
         accelerator: '',
-        click: function(event){
-            openFile(event)
+        click: function () {
+            dialog.showOpenDialog({
+                properties: ['openFile'],
+                filters: [{ name: 'Images', extensions: ['jpg', 'png', 'gif'] }] //指定为图片
+            }, function (files) {
+                if (files) win.webContents.send('selected-image', files)
+            })
         }
-    },{
+    }, {
         label: '转化为灰度图',
         accelerator: '',
-        click: function(event){
+        click: function (event) {
 
         }
-    },{
+    }, {
         label: '保存图片',
         accelerator: '',
-        click: function(event){
+        click: function (event) {
             saveFile(event)
         }
     }]
@@ -68,38 +82,38 @@ let template = [{
     submenu: [{
         label: '直方图修正',
         accelerator: '',
-        click: function(event){
-            
-        }
-    },{
-        label: '灰度图增强',
-        accelerator: '',
-        click: function(event){
+        click: function (event) {
 
         }
-    },{
+    }, {
+        label: '灰度图增强',
+        accelerator: '',
+        click: function (event) {
+
+        }
+    }, {
         label: '彩色图增强',
         accelerator: '',
-        click: function(event){
-            
+        click: function (event) {
+
         }
-    },{
+    }, {
         label: '低通滤波',
         accelerator: '',
-        click: function(event){
-            
+        click: function (event) {
+
         }
-    },{
+    }, {
         label: '高通滤波',
         accelerator: '',
-        click: function(event){
-            
+        click: function (event) {
+
         }
-    },{
+    }, {
         label: '同态滤波',
         accelerator: '',
-        click: function(event){
-            
+        click: function (event) {
+
         }
     }]
 }, {
@@ -107,20 +121,20 @@ let template = [{
     submenu: [{
         label: '旋转平移',
         accelerator: '',
-        click: function(event){
+        click: function (event) {
 
         }
-    },{
+    }, {
         label: '拉伸（调整尺寸）',
         accelerator: '',
-        click: function(event){
+        click: function (event) {
 
         }
-    },{
+    }, {
         label: '放大缩小',
         accelerator: '',
-        click: function(event){
-            
+        click: function (event) {
+
         }
     }]
 }, {
@@ -128,26 +142,26 @@ let template = [{
     submenu: [{
         label: 'Sobel',
         accelerator: '',
-        click: function(event){
+        click: function (event) {
 
         }
-    },{
+    }, {
         label: 'Laplace',
         accelerator: '',
-        click: function(event){
+        click: function (event) {
 
         }
-    },{
+    }, {
         label: 'Prewitt',
         accelerator: '',
-        click: function(event){
-            
+        click: function (event) {
+
         }
-    },{
+    }, {
         label: 'Roberts',
         accelerator: '',
-        click: function(event){
-            
+        click: function (event) {
+
         }
     }]
 }, {
@@ -155,20 +169,20 @@ let template = [{
     submenu: [{
         label: '图像复原',
         accelerator: '',
-        click: function(event){
+        click: function (event) {
 
         }
-    },{
+    }, {
         label: '图像分割',
         accelerator: '',
-        click: function(event){
+        click: function (event) {
 
         }
-    },{
+    }, {
         label: '图像压缩',
         accelerator: '',
-        click: function(event){
-            
+        click: function (event) {
+
         }
     }]
 }, {
@@ -372,30 +386,30 @@ function createWindow() {
     }))
 }
 
-function openFile(event){
+function openFile(event) {
     dialog.showOpenDialog({
         properties: ['openFile'],
-        filters:[{name: 'Images', extensions: ['jpg', 'png', 'gif']}] //指定为图片
-      }, function (files) {
+        filters: [{ name: 'Images', extensions: ['jpg', 'png', 'gif'] }] //指定为图片
+    }, function (files) {
         if (files) event.sender.send('selected-image', files)
-      })
+    })
 }
 
-function saveFile(event){
+function saveFile(event) {
     const options = {
         title: '保存图片',
         filters: [
-            {names: 'Images',extensions: ['jpg', 'png', 'gif']}
+            { names: 'Images', extensions: ['jpg', 'png', 'gif'] }
         ]
     }
-    dialog.showSaveDialog(options, function(filename){
+    dialog.showSaveDialog(options, function (filename) {
         event.sender.send('save-file', filename)
     })
 }
 
 app.on('ready', createWindow)
 
-ipcMain.on('open-mainwindow',function(){
+ipcMain.on('open-mainwindow', function () {
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'main.html'),
         protocol: 'file:',

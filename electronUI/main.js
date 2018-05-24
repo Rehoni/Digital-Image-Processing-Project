@@ -13,14 +13,14 @@ const { ipcMain } = require('electron')
 const { ipcRender } = require('electron')
 const { dialog } = require('electron')
 
-const zerorpc = require('zerorpc');
+//  const zerorpc = require('zerorpc');
 
-var client = new zerorpc.Client();
-client.connect("tcp://127.0.0.1:4242");
+// var client = new zerorpc.Client();
+// client.connect("tcp://127.0.0.1:4242");
 
-client.invoke('hello','rpc',function(error,res,more){
-    console.log(res);
-})
+// client.invoke('hello','rpc',function(error,res,more){
+//     console.log(res);
+// })
 
 let template = [{
     label: '编辑',

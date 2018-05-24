@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10892c0a-d050-4c8d-8d4d-a4ab88c4b02c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/zeroServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electronUI/assets/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/../electronUI/assets/css/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electronUI/assets/js/file.js" beforeDir="false" afterPath="$PROJECT_DIR$/../electronUI/assets/js/file.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeroClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeroServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/zeroServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electronUI/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../electronUI/.vscode/launch.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../electronUI/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../electronUI/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electronUI/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../electronUI/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electronUI/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../electronUI/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,10 +19,11 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/DIP$restoration.coverage" NAME="restoration Coverage Results" MODIFIED="1526478520209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scikit-image-Operation" />
-    <SUITE FILE_PATH="coverage/Digital_image_processing$zeroServer.coverage" NAME="zeroServer Coverage Results" MODIFIED="1527088809077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Digital_image_processing$zeroServer.coverage" NAME="zeroServer Coverage Results" MODIFIED="1527130355242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Digital_image_processing$filter.coverage" NAME="filter Coverage Results" MODIFIED="1526479541137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scikit-image-Operation" />
     <SUITE FILE_PATH="coverage/DIP$solv2.coverage" NAME="solv2 Coverage Results" MODIFIED="1526388324824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Digital_image_processing$restoration__1_.coverage" NAME="restoration (1) Coverage Results" MODIFIED="1526479517104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scikit-image-Operation" />
+    <SUITE FILE_PATH="coverage/Digital_image_processing$zeroClient.coverage" NAME="zeroClient Coverage Results" MODIFIED="1527130359408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Digital_image_processing$restoration.coverage" NAME="restoration Coverage Results" MODIFIED="1526479556289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scikit-image-Operation" />
     <SUITE FILE_PATH="coverage/DIP$test.coverage" NAME="test Coverage Results" MODIFIED="1526388066168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DIP$enhancepic.coverage" NAME="enhancepic Coverage Results" MODIFIED="1526392085764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/imageenhance" />
@@ -49,20 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="filter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scikit-image-Operation/filter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="zeroServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zeroServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="66">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -106,6 +101,7 @@
         <option value="$PROJECT_DIR$/scikit-image-Operation/transform.py" />
         <option value="$PROJECT_DIR$/scikit-image-Operation/hist.py" />
         <option value="$PROJECT_DIR$/zeroServer.py" />
+        <option value="$PROJECT_DIR$/zeroClient.py" />
       </list>
     </option>
   </component>
@@ -119,10 +115,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="365" />
-    <option name="y" value="41" />
+    <option name="x" value="513" />
+    <option name="y" value="58" />
     <option name="width" value="1346" />
-    <option name="height" value="802" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -130,6 +126,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Digital image processing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Digital image processing" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -146,17 +153,6 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="DIP" type="cbb8eebc:String" user="DIP" />
               <item name="scikit-image-Operation" type="cbb8eebc:String" user="scikit-image-Operation" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Digital image processing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Digital image processing" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,7 +186,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.zeroServer">
+  <component name="RunManager" selected="Python.zeroClient">
     <configuration name="binary" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Digital image processing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -248,7 +244,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="transform" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="zeroClient" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Digital image processing" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -256,12 +252,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scikit-image-Operation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scikit-image-Operation/transform.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zeroClient.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -287,19 +283,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.transform" />
       <item itemvalue="Python.restoration" />
       <item itemvalue="Python.hist" />
       <item itemvalue="Python.binary" />
       <item itemvalue="Python.zeroServer" />
+      <item itemvalue="Python.zeroClient" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.zeroClient" />
         <item itemvalue="Python.zeroServer" />
         <item itemvalue="Python.binary" />
         <item itemvalue="Python.hist" />
         <item itemvalue="Python.restoration" />
-        <item itemvalue="Python.transform" />
       </list>
     </recent_temporary>
   </component>
@@ -362,19 +358,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="365" y="41" width="1346" height="802" extended-state="0" />
+    <frame x="513" y="58" width="1346" height="788" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49785867" weight="0.46568626" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.501606" side_tool="true" weight="0.35583523" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.61509633" weight="0.3926097" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.498394" weight="0.3290993" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498394" weight="0.35457516" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498394" weight="0.5501672" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49892932" weight="0.32951945" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.31924883" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.21205008" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32976446" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946466" weight="0.32951945" />
       <window_info anchor="right" id="SciView" order="3" sideWeight="0.49829352" weight="0.3035332" />
       <window_info id="Structure" order="1" sideWeight="0.5018868" side_tool="true" weight="0.19700214" />
       <window_info id="Favorites" order="2" sideWeight="0.5018868" side_tool="true" weight="0.19700214" />
@@ -386,6 +381,7 @@
       <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" sideWeight="0.5017065" side_tool="true" weight="0.20021413" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946466" weight="0.32951945" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,6 +448,20 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/scikit-image-Operation/filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeroServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scikit-image-Operation/filter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -774,15 +784,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scikit-image-Operation/filter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
+        <state relative-caret-position="44">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeroClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zeroServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="66">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
         </state>
       </provider>
     </entry>

@@ -13,6 +13,21 @@
 
 ![about图](UIassets//about.png)
 
+## zeroRPC
+
+Have been spending three days on **zeroRPC**
+          using both ubuntu(can't find zeroRPC) and windows(DDL Error) platform
+
+The problem is in the **zeroMQ** I think
+Maybe ubuntu's approach can get over this Error
+
+Solving:
+
+Using [electron-python-example](https://github.com/fyears/electron-python-example)
+
+1. The zeroRPC configuration is in the **package.json**
+2. The author commits on the **zeroRPC** reposity
+
 ## menu设计
 
 - 文件

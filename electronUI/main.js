@@ -5,7 +5,7 @@ const BrowserWindow = electron.BrowserWindow
 const Menu = electron.Menu
 const app = electron.app
 
-
+const zerorpc = require('zerorpc')
 const path = require('path')
 const url = require('url')
 const os = require('os')
@@ -13,14 +13,14 @@ const { ipcMain } = require('electron')
 const { ipcRender } = require('electron')
 const { dialog } = require('electron')
 
-//  const zerorpc = require('zerorpc');
+var server = new zerorpc.Server({
+    hello:function(name,reply){
+        reply(null,"hello, "+name);
+    }
+});
 
-// var client = new zerorpc.Client();
-// client.connect("tcp://127.0.0.1:4242");
+server.bind("tcp://0.0.0.0:4242");
 
-// client.invoke('hello','rpc',function(error,res,more){
-//     console.log(res);
-// })
 
 let template = [{
     label: '编辑',

@@ -28,6 +28,26 @@ Using [electron-python-example](https://github.com/fyears/electron-python-exampl
 1. The zeroRPC configuration is in the **package.json**
 2. The author commits on the **zeroRPC** reposity
 
+### 解决方案
+
+用了一种比较 **投机取巧** 的方法
+git clone了electron-python-example这个项目的代码拿到本地，发现作者的代码能够保证zerorpc的正常运行
+然后将项目包里的node_modules中的zerorpc包和zeromq包copy到本项目的node_modules中
+
+>该作者在官方0rpc/zerorpc-node仓库的基础上update了一下，[fyears/zerorpc-node](https://github.com/fyears/zerorpc-node)可以尝试一下
+
+![log1](assets/log1.png)
+![log1](assets/log2.png)
+
+然后通过不断检查缺失的包依次又补进了四个module，然后确认zerorpc有用了
+
++ msgpack-lite
++ int64-buffer
++ ieee754
++ event-lite
+
+![log1](assets/log3.png)
+
 ## menu设计
 
 - 文件

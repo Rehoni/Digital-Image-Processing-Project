@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10892c0a-d050-4c8d-8d4d-a4ab88c4b02c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../electronUI/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../electronUI/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electronUI/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../electronUI/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="10892c0a-d050-4c8d-8d4d-a4ab88c4b02c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,8 +57,8 @@
       <file leaf-file-name="zeroClient.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zeroClient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="110">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -104,8 +101,8 @@
         <option value="$PROJECT_DIR$/scikit-image-Operation/restoration.py" />
         <option value="$PROJECT_DIR$/scikit-image-Operation/transform.py" />
         <option value="$PROJECT_DIR$/scikit-image-Operation/hist.py" />
-        <option value="$PROJECT_DIR$/zeroClient.py" />
         <option value="$PROJECT_DIR$/zeroServer.py" />
+        <option value="$PROJECT_DIR$/zeroClient.py" />
       </list>
     </option>
   </component>
@@ -363,16 +360,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49785867" weight="0.46568626" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.501606" side_tool="true" weight="0.35583523" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.61509633" weight="0.3926097" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.498394" weight="0.3290993" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498394" weight="0.5501672" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498394" weight="0.45848376" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49892932" weight="0.32951945" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.21004567" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.21004567" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32976446" />
       <window_info anchor="right" id="SciView" order="3" sideWeight="0.49829352" weight="0.3035332" />
@@ -803,8 +799,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zeroClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="110">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

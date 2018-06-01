@@ -1,26 +1,81 @@
-const electron = require('electron')
+//jshint esversion:6 
+
+const electron = require('electron');
 //electron.app负责管理Electron 应用程序的生命周期， electron.BrowserWindow类负责创建窗口。 
 
-const BrowserWindow = electron.BrowserWindow
-const Menu = electron.Menu
-const app = electron.app
+const BrowserWindow = electron.BrowserWindow;
+const Menu = electron.Menu;
+const app = electron.app;
 
-const zerorpc = require('zerorpc')
-const path = require('path')
-const url = require('url')
-const os = require('os')
-const { ipcMain } = require('electron')
-const { ipcRender } = require('electron')
-const { dialog } = require('electron')
 
-var server = new zerorpc.Server({
-    hello:function(name,reply){
-        reply(null,"hello, "+name);
-    }
-});
+const path = require('path');
+const url = require('url');
+const os = require('os');
+const { ipcMain } = require('electron');
+const { ipcRender } = require('electron');
+const { dialog } = require('electron');
 
-server.bind("tcp://0.0.0.0:4242");
 
+/*************************************************************
+ * py process
+ *************************************************************/
+const PY_DIST_FOLDER = 'pyimgdist';
+const PY_FOLDER = 'pyimg';
+const PY_MODULE = 'zeroServer'; // without .py suffix
+
+let pyProc = null;
+let pyPort = null;
+
+const guessPackaged = () => {
+  const fullPath = path.join(__dirname, PY_DIST_FOLDER);
+  return require('fs').existsSync(fullPath);
+};
+
+const getScriptPath = () => {
+  if (!guessPackaged()) {
+    return path.join(__dirname, PY_FOLDER, PY_MODULE + '.py');
+  }
+  if (process.platform === 'win32') {
+    return path.join(__dirname, PY_DIST_FOLDER, PY_MODULE, PY_MODULE + '.exe');
+  }
+  return path.join(__dirname, PY_DIST_FOLDER, PY_MODULE, PY_MODULE);
+};
+
+const selectPort = () => {
+  pyPort = 4242;
+  return pyPort;
+};
+
+const createPyProc = () => {
+  let script = getScriptPath();
+  let port = '' + selectPort();
+
+  if (guessPackaged()) {
+    pyProc = require('child_process').execFile(script, [port]);
+  } else {
+    pyProc = require('child_process').spawn('python', [script, port]);
+  }
+ 
+  if (pyProc != null) {
+    //console.log(pyProc)
+    console.log('child process success on port ' + port);
+  }
+};
+
+const exitPyProc = () => {
+  pyProc.kill();
+  pyProc = null;
+  pyPort = null;
+};
+
+app.on('ready', createPyProc);
+app.on('will-quit', exitPyProc);
+
+
+
+/*************************************************************
+ * electron menu
+ *************************************************************/
 
 let template = [{
     label: '编辑',
@@ -61,8 +116,8 @@ let template = [{
                 properties: ['openFile'],
                 filters: [{ name: 'Images', extensions: ['jpg', 'png', 'gif'] }] //指定为图片
             }, function (files) {
-                if (files) win.webContents.send('selected-image', files)
-            })
+                if (files) win.webContents.send('selected-image', files);
+            });
         }
     }, {
         label: '转化为灰度图',
@@ -74,7 +129,7 @@ let template = [{
         label: '保存图片',
         accelerator: '',
         click: function (event) {
-            saveFile(event)
+            saveFile(event);
         }
     }]
 }, {
@@ -196,39 +251,39 @@ let template = [{
                 if (focusedWindow.id === 1) {
                     BrowserWindow.getAllWindows().forEach(function (win) {
                         if (win.id > 1) {
-                            win.close()
+                            win.close();
                         }
-                    })
+                    });
                 }
-                focusedWindow.reload()
+                focusedWindow.reload();
             }
         }
     }, {
         label: '切换全屏',
         accelerator: (function () {
             if (process.platform === 'darwin') {
-                return 'Ctrl+Command+F'
+                return 'Ctrl+Command+F';
             } else {
-                return 'F11'
+                return 'F11';
             }
         })(),
         click: function (item, focusedWindow) {
             if (focusedWindow) {
-                focusedWindow.setFullScreen(!focusedWindow.isFullScreen())
+                focusedWindow.setFullScreen(!focusedWindow.isFullScreen());
             }
         }
     }, {
         label: '切换开发者工具',
         accelerator: (function () {
             if (process.platform === 'darwin') {
-                return 'Alt+Command+I'
+                return 'Alt+Command+I';
             } else {
-                return 'Ctrl+Shift+I'
+                return 'Ctrl+Shift+I';
             }
         })(),
         click: function (item, focusedWindow) {
             if (focusedWindow) {
-                focusedWindow.toggleDevTools()
+                focusedWindow.toggleDevTools();
             }
         }
     }, {
@@ -242,8 +297,8 @@ let template = [{
                     title: '应用程序菜单演示',
                     buttons: ['好的'],
                     message: '此演示用于 "菜单" 部分, 展示如何在应用程序菜单中创建可点击的菜单项.'
-                }
-                electron.dialog.showMessageBox(focusedWindow, options, function () { })
+                };
+                electron.dialog.showMessageBox(focusedWindow, options, function () { });
             }
         }
     }]
@@ -266,7 +321,7 @@ let template = [{
         enabled: false,
         key: 'reopenMenuItem',
         click: function () {
-            app.emit('activate')
+            app.emit('activate');
         }
     }]
 }, {
@@ -275,15 +330,15 @@ let template = [{
     submenu: [{
         label: '学习更多',
         click: function () {
-            electron.shell.openExternal('http://electron.atom.io')
+            electron.shell.openExternal('http://electron.atom.io');
         }
     }]
-}]
+}];
 
 function addUpdateMenuItems(items, position) {
-    if (process.mas) return
+    if (process.mas) return;
 
-    const version = electron.app.getVersion()
+    const version = electron.app.getVersion();
     let updateItems = [{
         label: `Version ${version}`,
         enabled: false
@@ -296,7 +351,7 @@ function addUpdateMenuItems(items, position) {
         visible: false,
         key: 'checkForUpdate',
         click: function () {
-            require('electron').autoUpdater.checkForUpdates()
+            require('electron').autoUpdater.checkForUpdates();
         }
     }, {
         label: '重启并安装更新',
@@ -304,32 +359,32 @@ function addUpdateMenuItems(items, position) {
         visible: false,
         key: 'restartToUpdate',
         click: function () {
-            require('electron').autoUpdater.quitAndInstall()
+            require('electron').autoUpdater.quitAndInstall();
         }
-    }]
+    }];
 
-    items.splice.apply(items, [position, 0].concat(updateItems))
+    items.splice.apply(items, [position, 0].concat(updateItems));
 }
 
 function findReopenMenuItem() {
-    const menu = Menu.getApplicationMenu()
-    if (!menu) return
+    const menu = Menu.getApplicationMenu();
+    if (!menu) return;
 
-    let reopenMenuItem
+    let reopenMenuItem;
     menu.items.forEach(function (item) {
         if (item.submenu) {
             item.submenu.items.forEach(function (item) {
                 if (item.key === 'reopenMenuItem') {
-                    reopenMenuItem = item
+                    reopenMenuItem = item;
                 }
-            })
+            });
         }
-    })
-    return reopenMenuItem
+    });
+    return reopenMenuItem;
 }
 
 if (process.platform === 'darwin') {
-    const name = electron.app.getName()
+    const name = electron.app.getName();
     template.unshift({
         label: name,
         submenu: [{
@@ -360,30 +415,34 @@ if (process.platform === 'darwin') {
             label: '退出',
             accelerator: 'Command+Q',
             click: function () {
-                app.quit()
+                app.quit();
             }
         }]
-    })
+    });
     // 窗口菜单.
     template[3].submenu.push({
         type: 'separator'
     }, {
             label: '前置所有',
             role: 'front'
-        })
+        });
 
-    addUpdateMenuItems(template[0].submenu, 1)
+    addUpdateMenuItems(template[0].submenu, 1);
 }
 
+/*************************************************************
+ * main window management
+ *************************************************************/
 
 
 function createWindow() {
-    win = new BrowserWindow({ width: 1300, height: 800 })
+    win = new BrowserWindow({ width: 1300, height: 800 });
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'about.html'),
         protocol: 'file:',
         slashes: true
-    }))
+    }));
+    win.webContents.openDevTools();
 }
 
 function openFile(event) {
@@ -391,8 +450,8 @@ function openFile(event) {
         properties: ['openFile'],
         filters: [{ name: 'Images', extensions: ['jpg', 'png', 'gif'] }] //指定为图片
     }, function (files) {
-        if (files) event.sender.send('selected-image', files)
-    })
+        if (files) event.sender.send('selected-image', files);
+    });
 }
 
 function saveFile(event) {
@@ -401,40 +460,47 @@ function saveFile(event) {
         filters: [
             { names: 'Images', extensions: ['jpg', 'png', 'gif'] }
         ]
-    }
+    };
     dialog.showSaveDialog(options, function (filename) {
-        event.sender.send('save-file', filename)
-    })
+        event.sender.send('save-file', filename);
+    });
 }
 
-app.on('ready', createWindow)
+app.on('ready', createWindow);
+
+/*************************************************************
+ * ipc connect
+ *************************************************************/
+
 
 ipcMain.on('open-mainwindow', function () {
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'main.html'),
         protocol: 'file:',
         slashes: true
-    }))
+    }));
 
-    const menu = Menu.buildFromTemplate(template)
-    Menu.setApplicationMenu(menu)
-})
+    const menu = Menu.buildFromTemplate(template);
+    Menu.setApplicationMenu(menu);
+});
 
 ipcMain.on('open-file-dialog', function (event) {
-    openFile(event)
-})
+    openFile(event);
+});
 
 ipcMain.on('save-file-dialog', function (event) {
-    saveFile(event)
-})
+    saveFile(event);
+});
+
+
 
 app.on('browser-window-created', function () {
-    let reopenMenuItem = findReopenMenuItem()
-    if (reopenMenuItem) reopenMenuItem.enabled = false
-})
+    let reopenMenuItem = findReopenMenuItem();
+    if (reopenMenuItem) reopenMenuItem.enabled = false;
+});
 
 app.on('window-all-closed', () => {
-    let reopenMenuItem = findReopenMenuItem()
-    if (reopenMenuItem) reopenMenuItem.enabled = true
-    app.quit()
-})
+    let reopenMenuItem = findReopenMenuItem();
+    if (reopenMenuItem) reopenMenuItem.enabled = true;
+    app.quit();
+});

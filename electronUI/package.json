@@ -17,8 +17,6 @@
   },
   "homepage": "https://github.com/obsession707/DIP#readme",
   "dependencies": {
-    "electron": "^2.0.2",
-    "zeromq": "^4.6.0",
-    "zerorpc": "^0.9.7"
+    "electron": "^2.0.2"
   }
 }

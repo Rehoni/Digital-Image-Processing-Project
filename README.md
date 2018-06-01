@@ -45,6 +45,7 @@ git clone了electron-python-example这个项目的代码拿到本地，发现作
 + int64-buffer
 + ieee754
 + event-lite
++ underscore
 
 ![log1](assets/log3.png)
 

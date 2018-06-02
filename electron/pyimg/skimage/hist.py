@@ -6,6 +6,8 @@ from skimage import exposure, data
 from matplotlib import pyplot as plt
 
 
+
+
 # 分成两个bin，每个bin的统计量是一样的，但numpy返回的是每个bin的两端的范围值，而skimage返回的是每个bin的中间值
 def simpleTest():
     image = data.camera() * 1.0
@@ -69,6 +71,6 @@ def equal_hist():
 
 
 if __name__ == '__main__':
-    # simpleHist()
+    simpleHist()
     rgbHist()
-    # equal_hist()
+    equal_hist()

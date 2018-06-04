@@ -18,18 +18,27 @@ class Show:
     # file_path = img.src
     #
 
-    def openImage(self, file_path):
+    def open_image(self, file_path):
         image = io.imread(file_path)
         self.__curr_path = file_path
         self.curr_image = image
 
-    def histImage(self):
+    def hist_image(self):
         self.hist_image = exposure.histogram(image=self.curr_image, nbins=2)
 
-    def imageShape(self):
-        self.shape['type'] = type(self.curr_image)
-        self.shape['size'] = self.curr_image.size
-        self.shape['mean'] = self.curr_image.mean()
-        self.shape['shape'] = self.curr_image.shape
-        return self.shape
+    def image_size(self):
+        return str(self.curr_image.size)
+
+    def image_mean(self):
+        return str(self.curr_image.mean())
+
+    # self.shape['type'] = type(self.curr_image)
+    # self.shape['size'] = self.curr_image.size
+    # self.shape['mean'] = self.curr_image.mean()
+    # self.shape['shape'] = self.curr_image.shape
+    # val_shape = self.shape
+    # return val_shape
+
+    def image_shape(self):
+        return str(self.curr_image.shape)
 

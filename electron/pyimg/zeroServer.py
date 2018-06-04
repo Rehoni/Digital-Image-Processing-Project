@@ -1,5 +1,6 @@
 import zerorpc
 import sys
+from scikitfunc.imagefunc import Show
 
 
 class HelloRPC(object):
@@ -10,6 +11,21 @@ class HelloRPC(object):
     def echo(self, text):
         """echo any text"""
         return text
+
+    def mean(self, file_path):
+        show = Show()
+        show.open_image(file_path)
+        return show.image_mean()
+
+    def size(self, file_path):
+        show = Show()
+        show.open_image(file_path)
+        return show.image_size()
+
+    def shape(self, file_path):
+        show = Show()
+        show.open_image(file_path)
+        return show.image_shape()
 
 
 def parse_port():

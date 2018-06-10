@@ -7,7 +7,7 @@ from PIL import Image
 from pylab import *
 
 # 读取图像到数组中，并灰度化
-im = array(Image.open('../ya.jpg').convert('L'))
+im = array(Image.open('../../lena.jpg').convert('L'))
 
 # 绘制原始直方图
 subplot(2, 3, 1)

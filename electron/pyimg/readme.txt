@@ -1,0 +1,3 @@
+因为本身项目提交的代码中，venv文件夹作为pycharm的local的python虚拟环境，
+配置了本项目中所有的python库在本地venv文件夹中，因此导致了venv文件夹过大
+为方便邮件上传，删除了venv文件夹，如有需要可以根据图片添加python环境配置

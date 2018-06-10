@@ -1,6 +1,7 @@
 import zerorpc
 import sys
 from scikitfunc.imagefunc import Show
+from scikitfunc.filter import EdgeShow
 
 
 class HelloRPC(object):
@@ -12,20 +13,28 @@ class HelloRPC(object):
         """echo any text"""
         return text
 
+    def __init__(self):
+        self.show = Show()
+        self.edge = EdgeShow()
+
+    def open(self, file_path):
+        self.show.open_image(file_path)
+
     def mean(self, file_path):
-        show = Show()
-        show.open_image(file_path)
-        return show.image_mean()
+        return self.show.image_mean(file_path)
 
     def size(self, file_path):
-        show = Show()
-        show.open_image(file_path)
-        return show.image_size()
+        return self.show.image_size(file_path)
 
     def shape(self, file_path):
-        show = Show()
-        show.open_image(file_path)
-        return show.image_shape()
+        return self.show.image_shape(file_path)
+
+    def gray(self, file_path):
+        return self.show.image_gray(file_path)
+
+    def sobel(self):
+        self.show = EdgeShow()
+        return self.show.sobel()
 
 
 def parse_port():

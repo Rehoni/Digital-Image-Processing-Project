@@ -122,8 +122,8 @@ let template = [{
     }, {
         label: '转化为灰度图',
         accelerator: '',
-        click: function (event) {
-
+        click: function () {
+            
         }
     }, {
         label: '保存图片',

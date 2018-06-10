@@ -4,7 +4,7 @@ from PIL import ImageFilter
 from PIL import Image
 
 
-im = Image.open('../lena.jpg').convert('L')
+im = Image.open('../../lena.jpg').convert('L')
 # im = array(Image.open('../ya.jpg').convert('L'))
 
 smooth = im.filter(ImageFilter.SMOOTH)

@@ -1,0 +1,5 @@
+本来按照package.json可以直接在node环境下安装本项目需要的nodejs包即node_modules
+因为zerorpc的特殊性（在node仓库中的zerorpc在本机上编译不通过，说来话长...
+具体node下的zerorpc可以参照https://github.com/fyears/zerorpc-node
+故不删除node_modules文件夹，为方便可视化软件GUI
+如有需要可以在当前目录下直接输入命令electron .来执行应用

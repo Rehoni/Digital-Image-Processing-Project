@@ -9,7 +9,7 @@ from pylab import *
 import copy
 
 # 读取图像到数组中
-im = array(Image.open('../ya.jpg'))
+im = array(Image.open('../../lena.jpg'))
 
 # 获取通道
 r = im[:, :, 0]
